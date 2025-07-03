@@ -1,0 +1,61 @@
+# ARGUS-V2 Configuration for Hello Microservice
+project:
+  name: hello-microservice
+  type: microservice
+  version: "1.0.0"
+  description: "Sample microservice demonstrating ARGUS-V2 capabilities"
+
+agents:
+  - name: claude
+    role: lead_architect
+    provider: claude
+    model: claude-3-sonnet-20240229
+    timeout: 30
+    max_tokens: 4000
+    
+  - name: gemini
+    role: security_analyst
+    provider: gemini
+    model: gemini-1.5-pro
+    timeout: 30
+    max_tokens: 4000
+    
+  - name: gpt4
+    role: code_reviewer
+    provider: openai
+    model: gpt-4-turbo-preview
+    timeout: 30
+    max_tokens: 4000
+
+phases:
+  - name: plan
+    type: plan
+    timeout: 300
+    consensus_threshold: 0.75
+    parallel: false
+    required_agents: [claude, gemini]
+    
+  - name: execute
+    type: execute
+    timeout: 600
+    parallel: true
+    quality_gates: [lint, test]
+    
+  - name: validate
+    type: validate
+    timeout: 300
+    quality_gates: [security_scan, performance_check]
+
+quality_gates:
+  lint:
+    tools: [ruff]
+    
+  test:
+    runners: [pytest]
+    coverage_threshold: 90
+    
+  security_scan:
+    scanners: [bandit]
+    
+  performance_check:
+    tools: [pytest-benchmark]

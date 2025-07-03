@@ -1,0 +1,56 @@
+{
+  "project_name": "ARGUS-V2-Self-Improvement",
+  "project_type": "framework_enhancement",
+  "description": "Use ARGUS-V2's enhanced capabilities to identify and implement its own improvements",
+  "context": {
+    "current_version": "V2-Enhanced",
+    "target": "recursive_self_improvement",
+    "focus_areas": [
+      "performance_optimization", 
+      "capability_expansion",
+      "architectural_refinement",
+      "user_experience_enhancement"
+    ]
+  },
+  "phases": [
+    {
+      "name": "self_analysis",
+      "type": "plan",
+      "description": "Analyze current V2 state using monitoring data and intelligence systems",
+      "agents": ["lead_architect", "performance_engineer"],
+      "objectives": [
+        "Review V2 architecture and performance metrics",
+        "Identify optimization opportunities using intelligence data",
+        "Assess current limitations and bottlenecks"
+      ]
+    },
+    {
+      "name": "improvement_design", 
+      "type": "execute",
+      "description": "Design specific improvements leveraging V2's enhanced capabilities",
+      "agents": ["lead_architect", "security_analyst", "code_reviewer"],
+      "objectives": [
+        "Design performance optimizations",
+        "Plan new features and capabilities", 
+        "Ensure security and quality standards"
+      ]
+    },
+    {
+      "name": "implementation_validation",
+      "type": "validate", 
+      "description": "Validate and approve self-improvements for implementation",
+      "agents": ["lead_architect", "security_analyst", "performance_engineer"],
+      "objectives": [
+        "Review proposed improvements",
+        "Validate technical feasibility",
+        "Approve implementation roadmap"
+      ]
+    }
+  ],
+  "success_criteria": [
+    "Identify concrete improvement opportunities",
+    "Design technically sound enhancements", 
+    "Maintain system stability and security",
+    "Demonstrate recursive improvement capability"
+  ]
+}
